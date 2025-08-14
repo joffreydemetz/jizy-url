@@ -1,0 +1,19 @@
+{
+    "name": "jdz/jizy-url",
+    "type": "library",
+    "description": "A simple JS url maker library",
+    "keywords": [
+        "JDZ",
+        "URL"
+    ],
+    "homepage": "https://jdz.joffreydemetz.com/jizyurl",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Joffrey Demetz",
+            "email": "joffrey.demetz@gmail.com",
+            "homepage": "https://joffreydemetz.com",
+            "role": "Lead"
+        }
+    ]
+}
