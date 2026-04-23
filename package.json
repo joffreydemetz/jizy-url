@@ -1,6 +1,6 @@
 {
   "name": "jizy-url",
-  "version": "2.1.4",
+  "version": "2.1.5",
   "browser": "dist/js/jizy-url.min.js",
   "main": "lib/index.js",
   "type": "module",
