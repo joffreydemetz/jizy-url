@@ -6,42 +6,48 @@ I'm not sure it can be useful to anyone else!
 ## Features
 
 - Set and manage a base path for URLs
-- Generate URLs with optional JSON prefix
 - Build query strings from objects (including array support)
 
 ## Installation
 
-Copy `lib/js/url.js` into your project or import it as needed.
+Copy `lib/index.js` into your project or import it as needed.
 
 ## Usage
 
 ```js
-import jUrl from './lib/js/url.js';
+import jUrl from './lib/index.js';
 
 const urlManager = new jUrl('/api');
 
-// Generate a URL with JSON prefix and query parameters
+// Generate a URL with query parameters (arrays supported)
 const url = urlManager.make('user/profile', { id: 42, tags: ['admin', 'editor'] });
-// Result: /api/json/user/profile/?id=42&tags[]=admin&tags[]=editor
+// Result: /api/user/profile?id=42&tags[]=admin&tags[]=editor
 
-// Generate a URL without JSON prefix
-const url2 = urlManager.make('user/profile', { id: 42 }, true);
-// Result: /api/user/profile/?id=42
+// Without query parameters
+const url2 = urlManager.make('user/profile');
+// Result: /api/user/profile
 ```
 
 ## API
 
 ### `new jUrl(basePath)`
-Create a new instance. `basePath` is the root for all generated URLs (default: `/`).
+Create a new instance. `basePath` is the root for all generated URLs (default: `/`). A trailing slash is always added.
 
 ### `setBasePath(basePath)`
 Set or update the base path. Returns the instance for chaining.
 
-### `make(path, vars, notJson)`
-- `path` (string): The endpoint path (slashes are normalized)
-- `vars` (object): Query parameters (arrays supported)
-- `notJson` (boolean): If `true`, omits the `json/` prefix
+### `make(path, vars)`
+- `path` (string): The endpoint path. Leading and trailing slashes are stripped; non-string values are treated as empty.
+- `vars` (object | null): Query parameters (arrays supported). Omit or pass `null` for none.
+
 Returns the constructed URL string.
 
 ### `toQueryString(vars)`
-Convert an object to a query string. Arrays are serialized as repeated keys with `[]`.
+Convert an object to a query string (prefixed with `?`). Arrays are serialized as repeated keys with `[]` (brackets left literal, value URL-encoded). Returns `''` if the result has no entries.
+
+## Tests
+
+```bash
+npm install
+npm test
+```
