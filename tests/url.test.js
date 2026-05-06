@@ -1,4 +1,4 @@
-import jUrl from '../lib/js/url.js';
+import jUrl from '../lib/index.js';
 
 describe('jUrl constructor / setBasePath', () => {
     test('defaults basePath to "/" when no argument given', () => {
