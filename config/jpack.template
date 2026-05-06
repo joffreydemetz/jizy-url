@@ -1,3 +1,0 @@
-import jUrl from '{{PREFIX}}lib/js/url.js';
-
-export default jUrl;

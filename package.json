@@ -1,24 +1,20 @@
 {
   "name": "jizy-url",
   "version": "2.1.5",
-  "browser": "dist/js/jizy-url.min.js",
   "main": "lib/index.js",
   "type": "module",
-  "jizy": "dist/",
   "keywords": [
     "jizy",
     "url"
   ],
   "author": "Joffrey Demetz <joffrey.demetz@gmail.com> (https://joffreydemetz.com/)",
   "license": "MIT",
-  "description": "A simple JS url maker library.",
+  "description": "A simple JS url maker.",
   "homepage": "https://jizy.joffreydemetz.com/url",
   "files": [
-    "dist/*",
     "lib/*"
   ],
   "scripts": {
-    "jpack:dist": "node ./cli/jpack.js",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
   "jest": {
@@ -33,7 +29,6 @@
     "url": "git+https://github.com/joffreydemetz/jizy-url.git"
   },
   "devDependencies": {
-    "jest": "^29.7.0",
-    "jizy-packer": "^2.1.44"
+    "jest": "^29.7.0"
   }
 }
