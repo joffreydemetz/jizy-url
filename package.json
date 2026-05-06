@@ -12,7 +12,7 @@
   "description": "A simple JS url maker.",
   "homepage": "https://jizy.joffreydemetz.com/url",
   "files": [
-    "lib/*"
+    "lib/index.js"
   ],
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
