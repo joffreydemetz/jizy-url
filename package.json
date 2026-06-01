@@ -1,16 +1,16 @@
 {
   "name": "jizy-url",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "main": "lib/index.js",
   "type": "module",
-  "keywords": [
-    "jizy",
-    "url"
-  ],
   "author": "Joffrey Demetz <joffrey.demetz@gmail.com> (https://joffreydemetz.com/)",
   "license": "MIT",
   "description": "A simple JS url maker.",
   "homepage": "https://jizy.joffreydemetz.com/url",
+  "keywords": [
+    "jizy",
+    "url"
+  ],
   "files": [
     "lib/index.js"
   ],

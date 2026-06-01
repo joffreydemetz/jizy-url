@@ -10,12 +10,14 @@ I'm not sure it can be useful to anyone else!
 
 ## Installation
 
-Copy `lib/index.js` into your project or import it as needed.
+```bash
+npm install jizy-url
+```
 
 ## Usage
 
 ```js
-import jUrl from './lib/index.js';
+import jUrl from 'jizy-url';
 
 const urlManager = new jUrl('/api');
 
